@@ -1,0 +1,7 @@
+function fvim() {
+    if [[ $# -eq 0 ]]; then
+        fd -t f | fzf --header "Open File in NeoVim" --preview "cat {}" | xargs nvim
+    else
+        fd -t f | fzf --header "Open File in NeoVim" --preview "cat {}" -q "$@" | xargs nvim
+    fi
+}

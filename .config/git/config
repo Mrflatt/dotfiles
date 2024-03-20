@@ -1,0 +1,23 @@
+[filter "lfs"]
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+[commit]
+  gpgsign = true
+[pull]
+  rebase = true
+[rerere]
+  enabled = true
+[column]
+  ui = auto
+[branch]
+  sort = -committerdate
+[core]
+  editor = nvim
+[includeIf "gitdir:~/Github/"]
+  path = ~/.config/git/config.public
+[includeIf "hasconfig:remote.*.url:git@github.devcloud.elisa.fi:*/**"]
+  path = ~/.config/git/config.private
+[includeIf "hasconfig:remote.*.url:git@github.com:*/**"]
+  path = ~/.config/git/config.public
