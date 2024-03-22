@@ -1,0 +1,29 @@
+# Color output (auto set to 'no' on dumb terminals).
+zstyle ':prezto:*:*' color 'yes'
+zstyle ':prezto:load' pmodule \
+  'environment' \
+  'terminal' \
+  'syntax-highlighting' \
+  'gpg' \
+  'editor' \
+  'history' \
+  'directory' \
+  'spectrum' \
+  'utility' \
+  'completion' \
+  'history-substring-search' \
+  'prompt' \
+  'git' \
+  'homebrew'
+
+zstyle ':prezto:module:editor' key-bindings 'vi'
+# Auto set to 'off' on dumb terminals.
+zstyle ':prezto:module:prompt' theme 'powerlevel10k'
+# By default, only the main highlighter is enabled.
+zstyle ':prezto:module:syntax-highlighting' color 'yes'
+zstyle ':prezto:module:syntax-highlighting' highlighters \
+  'main' \
+  'brackets' \
+  'pattern' \
+  'line' \
+  'root'

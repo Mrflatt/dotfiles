@@ -1,3 +1,10 @@
+vim.keymap.set("n", "<leader>s", function()
+  require("spectre").toggle({ is_insert_mode = true })
+end, { desc = "Toggle Spectre", noremap = true, silent = true })
+vim.keymap.set({ "n", "v" }, "<leader>sw", function()
+  require("spectre").open_visual({ select_word = true })
+end, { desc = "Search current word", noremap = true, silent = true })
+
 return {
   {
     "nvim-pack/nvim-spectre",
@@ -8,12 +15,11 @@ return {
     },
     config = function()
       local theme = require("catppuccin.palettes").get_palette("macchiato")
-      local spectre = require("spectre")
 
       vim.api.nvim_set_hl(0, "SpectreSearch", { bg = theme.red, fg = theme.base })
       vim.api.nvim_set_hl(0, "SpectreReplace", { bg = theme.green, fg = theme.base })
 
-      spectre.setup({
+      require("spectre").setup({
         highlight = {
           search = "SpectreSearch",
           replace = "SpectreReplace",
@@ -26,14 +32,6 @@ return {
           },
         },
       })
-      -- Open Spectre for global find/replace
-      vim.keymap.set("n", "<leader>S", function()
-        spectre.toggle()
-      end, { noremap = true, silent = true })
-
-      vim.keymap.set("n", "<leader>sw", function()
-        spectre.open_visual({ select_word = true })
-      end, { desc = "Search current word", noremap = true, silent = true })
     end,
   },
 }

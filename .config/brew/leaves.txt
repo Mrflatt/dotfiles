@@ -3,12 +3,12 @@ cmake
 coreutils
 cypher-shell
 derailed/k9s/k9s
-detekt
 eza
 fd
 fsouza/prettierd/prettierd
 fzf
 gh
+gnu-sed
 golangci-lint
 gopass
 grafana
@@ -32,6 +32,7 @@ minio-mc
 neovim
 nmap
 numpy
+openjdk@17
 p7zip
 peter-evans/kdef/kdef
 pillow
