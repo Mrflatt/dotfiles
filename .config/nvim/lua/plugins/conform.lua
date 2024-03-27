@@ -24,7 +24,7 @@ return {
         typescriptreact = { { "prettierd", "prettier" } },
         go = { "golines" },
         rust = { "rustfmt" },
-        yaml = { "yamlfmt" },
+        yaml = { { "prettierd", "yamlfmt" } },
         bash = { "shfmt" },
         sh = { "shfmt" },
       },
