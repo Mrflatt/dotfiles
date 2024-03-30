@@ -18,7 +18,13 @@ M.on_attach = function(client, bufnr)
   vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, opts("LSP: Signature Help"))
   vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts("LSP: [G]oto [D]eclaration"))
   vim.keymap.set("n", "td", vim.lsp.buf.type_definition, opts("LSP: [T]ype [D]efinition"))
-  vim.lsp.inlay_hint.enable(bufnr)
+  if client.server_capabilities.inlayHintProvider then
+    vim.keymap.set("n", "<space>h", function()
+      local current_setting = vim.lsp.inlay_hint.is_enabled(bufnr)
+      vim.lsp.inlay_hint.enable(bufnr, not current_setting)
+    end, opts("LSP: Toggle inlay hints"))
+  end
+  -- vim.lsp.inlay_hint.enable(bufnr)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
