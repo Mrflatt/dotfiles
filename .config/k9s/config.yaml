@@ -11,7 +11,7 @@ k9s:
     headless: false
     logoless: true
     crumbsless: false
-    reactive: false
+    reactive: true
     noIcons: false
     defaultsToFullScreen: false
   skipLatestRevCheck: false
