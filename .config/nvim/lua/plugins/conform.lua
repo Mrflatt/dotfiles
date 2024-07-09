@@ -27,6 +27,7 @@ return {
         yaml = { { "prettierd", "yamlfmt" } },
         bash = { "shfmt" },
         sh = { "shfmt" },
+        json = { "jq" },
       },
       format_on_save = {
         async = false,

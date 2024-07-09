@@ -1,6 +1,6 @@
 [window]
 startup_mode = "Maximized"
-decorations = "None"
+decorations = "Buttonless"
 opacity = 1.0
 [font]
 normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }

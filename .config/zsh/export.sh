@@ -7,4 +7,4 @@ export GOROOT=/usr/local/go
 export SDKMAN_DIR="$HOME/.sdkman"
 export NVM_DIR="$HOME/.nvm"
 export RUST_BACKTRACE=1
-export PATH="/Library/Frameworks/Python.framework/Versions/3.12/bin:/usr/local/opt/openssl@3/bin:/usr/local/sbin:${GOROOT}/bin:${GOPATH}/bin:${JAVA_HOME}/bin:$PATH"
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:/Library/Frameworks/Python.framework/Versions/3.12/bin:/usr/local/opt/openssl@3/bin:/usr/local/sbin:${GOROOT}/bin:${GOPATH}/bin:${JAVA_HOME}/bin:$PATH"
