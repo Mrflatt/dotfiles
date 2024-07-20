@@ -20,7 +20,7 @@ return {
       end, opts)
       -- Add current file to harpoon
       vim.keymap.set("n", "<leader>ha", function()
-        harpoon:list():append()
+        harpoon:list():add()
       end, opts)
       -- Remove current file from harpoon
       vim.keymap.set("n", "<leader>hr", function()

@@ -7,6 +7,7 @@ k9s:
   readOnly: false
   noExitOnCtrlC: true
   ui:
+    skin: dracula
     enableMouse: true
     headless: false
     logoless: true
@@ -30,7 +31,7 @@ k9s:
   logger:
     tail: 100
     buffer: 5000
-    sinceSeconds: -1
+    sinceSeconds: 300
     textWrap: false
     showTime: false
   thresholds:
