@@ -1,1 +1,3 @@
 .config/zsh/*.local*
+.config/zsh/.zsh_history
+.config/github-copilot

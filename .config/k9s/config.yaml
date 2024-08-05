@@ -7,7 +7,7 @@ k9s:
   readOnly: false
   noExitOnCtrlC: true
   ui:
-    skin: dracula
+    skin: catppuccin-macchiato
     enableMouse: true
     headless: false
     logoless: true
