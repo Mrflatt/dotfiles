@@ -4,6 +4,7 @@ export KUBE_EDITOR="$EDITOR"
 export GOPATH="$HOME/.go"
 export GOBIN="$GOPATH/bin"
 export GOROOT=/usr/local/go
+export GOPRIVATE=github.devcloud.elisa.fi
 export SDKMAN_DIR="$HOME/.sdkman"
 export NVM_DIR="$HOME/.nvm"
 export RUST_BACKTRACE=1

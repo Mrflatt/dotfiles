@@ -76,6 +76,7 @@ return {
           "gomodifytags",
           "yamlls",
           "yamlfmt",
+          "xmlformatter",
         },
       })
 

@@ -42,6 +42,17 @@ return {
           ["gs"] = "actions.change_sort",
           ["gx"] = "actions.open_external",
           ["g."] = "actions.toggle_hidden",
+          ["gd"] = {
+            desc = "Toggle detail view",
+            callback = function()
+              local config = require("oil.config")
+              if #config.columns == 1 then
+                oil.set_columns({ "icon", "permissions", "size", "mtime" })
+              else
+                oil.set_columns({ "icon" })
+              end
+            end,
+          },
         },
         view_options = {
           show_hidden = true,

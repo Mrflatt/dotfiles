@@ -24,3 +24,7 @@
   path = ~/.config/git/config.private
 [includeIf "hasconfig:remote.*.url:git@github.com:*/**"]
   path = ~/.config/git/config.public
+[includeIf "hasconfig:remote.*.url:https://github.com/**"]
+  path = ~/.config/git/config.public
+[url "git@github.devcloud.elisa.fi:"]
+	insteadOf = https://github.devcloud.elisa.fi/

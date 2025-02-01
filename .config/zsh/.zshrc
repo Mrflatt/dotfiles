@@ -33,3 +33,4 @@ fi
 # Load aliases last so zprezto aliases can be overridden
 [[ -f "$ZDOTDIR/aliases.sh" ]] && source "$ZDOTDIR/aliases.sh"
 [[ -f "$ZDOTDIR/aliases.local.sh" ]] && source "$ZDOTDIR/aliases.local.sh"
+eval "$(zoxide init zsh)"
