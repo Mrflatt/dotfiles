@@ -1,15 +1,20 @@
+ansible
 argocd
 bat
 cmake
 coreutils
 cypher-shell
 derailed/k9s/k9s
+detekt
 eza
 fd
 fsouza/prettierd/prettierd
 fzf
 gh
+git
+git-lfs
 gnu-sed
+gnu-tar
 golangci-lint
 gopass
 grafana
@@ -17,6 +22,7 @@ graphviz
 helm
 htop
 httpie
+icu4c@75
 int128/kubelogin/kubelogin
 jq
 kotlin-language-server
@@ -25,6 +31,7 @@ kube-ps1
 kubectx
 kubeseal
 kustomize
+libassuan@2
 librdkafka
 mage
 minio
@@ -44,4 +51,6 @@ stow
 telnet
 tmux
 trivy
+virtualenv
 yq
+zoxide
