@@ -35,6 +35,7 @@ return {
           },
         },
         yamlls = {},
+        kotlin_language_server = {},
         gopls = {
           filetypes = { "go", "gomod", "gowork", "gotmpl" },
           settings = {
@@ -66,6 +67,7 @@ return {
         debounce_hours = 12,
         ensure_installed = {
           "lua-language-server",
+          "kotlin-language-server",
           "prettierd",
           "stylua",
 

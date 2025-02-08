@@ -15,6 +15,7 @@ return {
       local oil = require("oil")
       oil.setup({
         use_default_keymaps = false,
+        skip_confirm_for_simple_edits = true,
         columns = {
           "icon",
           -- "permissions",
@@ -28,9 +29,9 @@ return {
         keymaps = {
           ["g?"] = "actions.show_help",
           ["<CR>"] = "actions.select",
-          ["<C-h>"] = "actions.select_split",
-          ["<C-s>"] = "actions.select_vsplit", -- this is used to navigate left
-          ["<C-t>"] = "actions.select_tab",
+          ["<C-s>"] = { "actions.select", opts = { vertical = true } },
+          ["<C-h>"] = { "actions.select", opts = { horizontal = true } },
+          ["<C-t>"] = { "actions.select", opts = { tab = true } },
           ["<C-p>"] = "actions.preview",
           ["<C-c>"] = "actions.close",
           ["<C-r>"] = "actions.refresh",
@@ -56,6 +57,9 @@ return {
         },
         view_options = {
           show_hidden = true,
+          is_always_hidden = function(name, _)
+            return name == ".."
+          end,
         },
       })
       vim.keymap.set("n", "<leader>e", function()

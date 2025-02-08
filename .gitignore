@@ -1,3 +1,5 @@
 .config/zsh/*.local*
 .config/zsh/.zsh_history
 .config/github-copilot
+.config/tmux/plugins/
+.config/wireshark/

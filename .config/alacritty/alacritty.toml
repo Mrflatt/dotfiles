@@ -1,7 +1,16 @@
+[general]
+import = [
+  # "~/.config/alacritty/catppuccin-latte.toml"
+  # "~/.config/alacritty/catppuccin-frappe.toml"
+  # "~/.config/alacritty/catppuccin-macchiato.toml"
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
 [window]
 startup_mode = "Maximized"
 decorations = "Buttonless"
 opacity = 1.0
+[selection]
+save_to_clipboard = false
 [font]
 normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
 bold = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }

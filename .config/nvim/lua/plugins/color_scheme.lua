@@ -2,15 +2,18 @@ return {
   {
     "catppuccin/nvim",
     lazy = false,
+    priority = 1000,
     config = function()
       require("catppuccin").setup({
+        transparent_background = false,
+        term_colors = true,
         integrations = {
           cmp = true,
           gitsigns = true,
           harpoon = true,
           illuminate = true,
           indent_blankline = {
-            enabled = false,
+            enabled = true,
             scope_color = "sapphire",
             colored_indent_levels = false,
           },
@@ -23,10 +26,11 @@ return {
           telescope = true,
           treesitter = true,
           treesitter_context = true,
+          rainbow_delimiters = true,
         },
       })
-
-      vim.cmd.colorscheme("catppuccin-macchiato")
+      -- latte, frappe, macchiato, mocha
+      vim.cmd.colorscheme("catppuccin-mocha")
 
       -- Hide all semantic highlights until upstream issues are resolved (https://github.com/catppuccin/nvim/issues/480)
       for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do

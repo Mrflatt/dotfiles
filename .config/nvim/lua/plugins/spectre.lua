@@ -4,6 +4,9 @@ end, { desc = "Toggle Spectre", noremap = true, silent = true })
 vim.keymap.set({ "n", "v" }, "<leader>sw", function()
   require("spectre").open_visual({ select_word = true })
 end, { desc = "Search current word", noremap = true, silent = true })
+vim.keymap.set({ "n", "v" }, "<leader>sp", function()
+  require("spectre").open_file_search({ select_word = true })
+end, { desc = "Search current word in file", noremap = true, silent = true })
 
 return {
   {
@@ -14,7 +17,7 @@ return {
       "catppuccin/nvim",
     },
     config = function()
-      local theme = require("catppuccin.palettes").get_palette("macchiato")
+      local theme = require("catppuccin.palettes").get_palette("mocha")
 
       vim.api.nvim_set_hl(0, "SpectreSearch", { bg = theme.red, fg = theme.base })
       vim.api.nvim_set_hl(0, "SpectreReplace", { bg = theme.green, fg = theme.base })
@@ -23,6 +26,12 @@ return {
         highlight = {
           search = "SpectreSearch",
           replace = "SpectreReplace",
+        },
+        replace_engine = {
+          ["sed"] = {
+            cmd = "sed",
+            args = { "-i", "", "-E" },
+          },
         },
         mapping = {
           ["send_to_qf"] = {

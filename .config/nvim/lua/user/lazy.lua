@@ -24,7 +24,11 @@ lazy.setup({
   },
   change_detection = {
     enabled = true,
-    notify = false,
+    notify = true,
+  },
+  checker = {
+    enabled = true,
+    notify = true,
   },
   install = {
     missing = true,
