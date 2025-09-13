@@ -8,7 +8,7 @@ k9s:
   noExitOnCtrlC: true
   ui:
     skin: catppuccin-macchiato
-    enableMouse: true
+    enableMouse: false
     headless: false
     logoless: true
     crumbsless: false

@@ -6,6 +6,7 @@ import = [
   "~/.config/alacritty/catppuccin-mocha.toml"
 ]
 [window]
+# dimensions = { columns = 100, lines = 24 }
 startup_mode = "Maximized"
 decorations = "Buttonless"
 opacity = 1.0

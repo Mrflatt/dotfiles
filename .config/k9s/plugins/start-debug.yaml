@@ -1,0 +1,18 @@
+plugins:
+  start-debug-pod:
+    shortCut: Ctrl-T
+    confirm: true
+    description: "Start debug pod in current context/namespace"
+    scopes:
+      - pods
+      - deployments
+    command: kubectl
+    background: true
+    args:
+      - apply
+      - -f
+      - /Users/lauri/edn/github/images/debug/deployment.yaml
+      - --context
+      - $CONTEXT
+      - --namespace
+      - $NAMESPACE

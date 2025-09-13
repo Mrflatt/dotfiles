@@ -8,4 +8,4 @@ export GOPRIVATE=github.devcloud.elisa.fi
 export SDKMAN_DIR="$HOME/.sdkman"
 export NVM_DIR="$HOME/.nvm"
 export RUST_BACKTRACE=1
-export PATH="/opt/homebrew/bin:$HOME/.cargo/bin:${KREW_ROOT:-$HOME/.krew}/bin:/Library/Frameworks/Python.framework/Versions/3.12/bin:/usr/local/opt/openssl@3/bin:/usr/local/sbin:${GOROOT}/bin:${GOPATH}/bin:${JAVA_HOME}/bin:$PATH"
+export PATH="$HOME/.warpstream:$HOME/.cargo/bin:${KREW_ROOT:-$HOME/.krew}/bin:/Library/Frameworks/Python.framework/Versions/3.12/bin:/usr/local/opt/openssl@3/bin:/usr/local/sbin:${GOROOT}/bin:${GOPATH}/bin:${JAVA_HOME}/bin:/opt/homebrew/bin:$PATH"

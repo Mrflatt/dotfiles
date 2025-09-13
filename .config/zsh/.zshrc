@@ -34,3 +34,19 @@ fi
 [[ -f "$ZDOTDIR/aliases.sh" ]] && source "$ZDOTDIR/aliases.sh"
 [[ -f "$ZDOTDIR/aliases.local.sh" ]] && source "$ZDOTDIR/aliases.local.sh"
 eval "$(zoxide init zsh)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
+
+. "$HOME/.local/share/../bin/env"
+
+# pnpm
+export PNPM_HOME="/Users/lauri/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
